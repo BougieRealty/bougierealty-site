@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://www.bougierealty.com/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/meetmike.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/services.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/testimonials.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/faq.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/contact.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/blog/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.bougierealty.com/blog/pricing-power-in-tight-inventory.html</loc><changefreq>weekly</changefreq></url>
+
+  <url>
+    <loc>https://www.bougierealty.com/thanks.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+</urlset>

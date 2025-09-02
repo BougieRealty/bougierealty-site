@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thinking About Selling Your Home?</title>
+<link rel="stylesheet" href="/css/styles.css" />
+
+<style>
+.tiles { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 12px 0 24px; }
+.tile { position:relative; display:block; border-radius:16px; overflow:hidden; border:1px solid #f1ca9b; min-height: 200px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+.tile-img { position:absolute; inset:0; background-size:cover; background-position:center; filter: brightness(.75); transition: transform .4s ease; }
+.tile-overlay { position:absolute; inset:0; background: radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,.0), rgba(0,0,0,.35)); }
+.tile-label { position:absolute; left:16px; bottom:14px; color:#fff; font-size:22px; font-weight:700; letter-spacing:.3px; text-shadow: 0 2px 8px rgba(0,0,0,.6); }
+.tile:hover .tile-img { transform: scale(1.05); }
+</style>
+
+</head>
+<body>
+<header class="container">
+      <div class="nav">
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo" loading="eager" decoding="async"/><span>Bougie Realty</span></a>
+        <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+      </div>
+    </header>
+<main class="page">
+  <h1>Thinking About Selling Your Home?<span class="badge">Free valuation report</span></h1>
+  <p class="lead">Type your address and request a **free home valuation report**. We’ll confirm details and send a pricing analysis with comps.</p>
+
+  <section class="form-card">
+    <form id="valuation-form" name="home-valuation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="home-valuation">
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+      </p>
+      <div class="row">
+        <input id="addr" name="address" type="text" placeholder="Enter your property address" autocomplete="off" aria-label="Property address" required>
+        <button id="request" type="submit">Request Report</button>
+        <button id="clear" type="button" class="secondary">Clear</button>
+      </div>
+      <p class="note">Submitting will also open your email client with a pre‑filled message to <strong>mike@bougierealty.com</strong> so you get a copy.</p>
+    </form>
+    <div id="ok" class="success">
+      <strong>Request sent.</strong> We’ll follow up shortly.
+    </div>
+  </section>
+</main>
+<footer class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div>
+            <h4>Bougie Realty</h4>
+            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="list">
+              <li><a href="/meetmike.html">Meet Mike</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li> </li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas served</h4>
+            <p>Massachusetts &amp; New Hampshire</p>
+          </div>
+        </div>
+        <div class="legal">
+          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+
+<style>
+:root{--brand:#f1ca9b;--ink:#0f0f0f;--muted:#666;--line:#e7e7e7;--bg:#fff}
+.page{max-width:980px;margin:3rem auto;padding:0 1rem}
+h1{font-size:clamp(1.8rem,2.5vw,2.4rem);margin:0 0 .75rem 0}
+.lead{max-width:760px;color:var(--muted)}
+.form-card{margin-top:1.25rem;border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--bg)}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+input[type="text"]{flex:1 1 480px;padding:14px 14px;border:1px solid var(--line);border-radius:12px;font-size:1rem}
+button{padding:14px 16px;border-radius:12px;border:1px solid #111;background:#111;color:#fff;cursor:pointer;transition:transform .08s ease, box-shadow .12s ease}
+button:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
+button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.note{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+.success{display:none;margin-top:1rem;border:1px dashed var(--line);border-radius:14px;padding:16px}
+.badge{display:inline-block;background:var(--brand);color:#111;padding:.2rem .5rem;border-radius:999px;font-size:.8rem;margin-left:.4rem}
+</style>
+
+<script>
+(function(){
+  var form = document.getElementById('valuation-form');
+  var addr = document.getElementById('addr');
+  var ok = document.getElementById('ok');
+  var clearBtn = document.getElementById('clear');
+  var reqBtn = document.getElementById('request');
+
+  // Enhance submit: send mailto AND allow Netlify to capture the form
+  form.addEventListener('submit', function(e){
+    // Let the normal form POST occur for Netlify capture.
+    // Additionally, open a mailto for immediate email to Mike.
+    try {
+      var address = (addr.value||'').trim();
+      var subject = encodeURIComponent('Home valuation report request');
+      var body = encodeURIComponent('Address: ' + address + '\n\nPlease send a home valuation report for this property.');
+      var href = 'mailto:mike@bougierealty.com?subject=' + subject + '&body=' + body;
+      window.location.href = href;
+    } catch(err) { /* ignore */ }
+  });
+
+  clearBtn.addEventListener('click', function(){ addr.value=''; addr.focus(); });
+})();
+</script>
+
+<script>
+(function(){
+  async function inject(selector, url){
+    try {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const res = await fetch(url, {cache:'no-store'});
+      if (!res.ok) return;
+      const html = await res.text();
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html.trim();
+      const repl = tmp.firstElementChild;
+      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
+        el.replaceWith(repl);
+      } else {
+        el.innerHTML = html;
+      }
+    } catch(e){ /* ignore */ }
+  }
+  inject('header', '/partials/header.html');
+  inject('footer', '/partials/footer.html');
+})();
+</script>
+
+</body>
+</html>

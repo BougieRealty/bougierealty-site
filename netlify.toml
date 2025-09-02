@@ -1,0 +1,4 @@
+
+# Minimal Netlify config for a static site
+[build]
+  publish = "/"

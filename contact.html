@@ -1,0 +1,134 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get in touch — Bougie Realty</title>
+    <meta name="description" content="Contact Bougie Realty for disciplined, straightforward guidance on your next real estate move in MA & NH." />
+    <link rel="canonical" href="https://www.bougierealty.com/contact.html" />
+    <meta property="og:title" content="Get in touch — Bougie Realty" />
+    <meta property="og:description" content="Contact Bougie Realty for disciplined, straightforward guidance on your next real estate move in MA & NH." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.bougierealty.com/contact.html" />
+    <meta property="og:image" content="https://www.bougierealty.com/assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bougierealty.com#website",
+      "url": "https://www.bougierealty.com/",
+      "name": "Bougie Realty",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.bougierealty.com#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bougierealty.com#org",
+      "name": "Bougie Realty",
+      "url": "https://www.bougierealty.com/",
+      "logo": "https://www.bougierealty.com/assets/logo.png",
+      "sameAs": [
+        "https://instagram.com/bougierealty"
+      ]
+    }
+  ]
+}</script>
+    </head>
+    <body class="">
+
+    <header class="container">
+      <div class="nav">
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo" loading="eager" decoding="async"/><span>Bougie Realty</span></a>
+        <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+      </div>
+    </header>
+
+      <main>
+<div class="container section">
+  <nav class="breadcrumbs"><a href="/">Home</a> / Contact</nav>
+  <h1>Get in touch</h1>
+  <p class="small">Tell me about your goals and timeline, and I’ll respond quickly</p>
+  <form class="contact-form" method="POST" data-netlify="true" action="/thanks.html" name="contact" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    
+  <p class="hidden" style="display:none;">
+    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+  </p>
+<label>Name</label>
+    <input type="text" name="name" required />
+    <label>E-mail</label>
+    <input type="email" name="email" required />
+    <label>Phone</label>
+    <input type="tel" name="phone" />
+    <label>Message</label>
+    <textarea name="message" rows="6" required></textarea>
+    <button class="button primary" type="submit">Send</button>
+  </form>
+  <p class="small"><strong>mike@bougierealty.com</strong> (</p>
+</div>
+</main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div>
+            <h4>Bougie Realty</h4>
+            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="list">
+              <li><a href="/meetmike.html">Meet Mike</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li> </li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas served</h4>
+            <p>Massachusetts &amp; New Hampshire</p>
+          </div>
+        </div>
+        <div class="legal">
+          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+
+    
+<script>
+(function(){
+  async function inject(selector, url){
+    try {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const res = await fetch(url, {cache:'no-store'});
+      if (!res.ok) return;
+      const html = await res.text();
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html.trim();
+      const repl = tmp.firstElementChild;
+      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
+        el.replaceWith(repl);
+      } else {
+        el.innerHTML = html;
+      }
+    } catch(e){ /* ignore */ }
+  }
+  inject('header', '/partials/header.html');
+  inject('footer', '/partials/footer.html');
+})();
+</script>
+
+</body>
+    </html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services | Bougie Realty</title>
+<link rel="stylesheet" href="/css/styles.css" />
+
+<style>
+.tiles { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 12px 0 24px; }
+.tile { position:relative; display:block; border-radius:16px; overflow:hidden; border:1px solid #f1ca9b; min-height: 200px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+.tile-img { position:absolute; inset:0; background-size:cover; background-position:center; filter: brightness(.75); transition: transform .4s ease; }
+.tile-overlay { position:absolute; inset:0; background: radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,.0), rgba(0,0,0,.35)); }
+.tile-label { position:absolute; left:16px; bottom:14px; color:#fff; font-size:22px; font-weight:700; letter-spacing:.3px; text-shadow: 0 2px 8px rgba(0,0,0,.6); }
+.tile:hover .tile-img { transform: scale(1.05); }
+</style>
+
+</head>
+    <body class="">
+
+    <header class="container">
+      <div class="nav">
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo" loading="eager" decoding="async"/><span>Bougie Realty</span></a>
+        <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+      </div>
+    </header>
+
+      
+<main class="container">
+  <section class="page-head" style="padding:28px 0 10px;">
+    <h1 style="margin:0;font-size:clamp(26px,3.6vw,40px);">Services</h1>
+    <p style="color:#6a6a6a;max-width:720px;margin:6px 0 0;">Choose your path.</p>
+  </section>
+  <section class="tiles">
+    
+    <a class="tile" href="/contact.html">
+      <div class="tile-img" style="background-image:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop');"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-label">Sellers</div>
+    </a>
+
+    <a class="tile" href="/contact.html">
+      <div class="tile-img" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop');"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-label">Buyers</div>
+    </a>
+
+    <a class="tile" href="/contact.html">
+      <div class="tile-img" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop');"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-label">Investors</div>
+    </a>
+  </section>
+</main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div>
+            <h4>Bougie Realty</h4>
+            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="list">
+              <li><a href="/meetmike.html">Meet Mike</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li> </li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas served</h4>
+            <p>Massachusetts &amp; New Hampshire</p>
+          </div>
+        </div>
+        <div class="legal">
+          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+
+    
+<script>
+(function(){
+  async function inject(selector, url){
+    try {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const res = await fetch(url, {cache:'no-store'});
+      if (!res.ok) return;
+      const html = await res.text();
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html.trim();
+      const repl = tmp.firstElementChild;
+      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
+        el.replaceWith(repl);
+      } else {
+        el.innerHTML = html;
+      }
+    } catch(e){ /* ignore */ }
+  }
+  inject('header', '/partials/header.html');
+  inject('footer', '/partials/footer.html');
+})();
+</script>
+
+</body>
+    </html>

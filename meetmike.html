@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meet Mike — Bougie Realty</title>
+<meta name="description" content="Meet Mike Bourgeois: Realtor, investor, and property manager serving MA & NH with disciplined advice and tight execution.">
+<link rel="canonical" href="https://www.bougierealty.com/meetmike.html" />
+<link rel="stylesheet" href="/css/styles.css" />
+<script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'Person', 'name': 'Mike Bourgeois', 'jobTitle': ['Realtor', 'Real Estate Investor', 'Property Manager'], 'worksFor': {'@type': 'Organization', 'name': 'Bougie Realty', 'url': 'https://www.bougierealty.com/'}, 'url': 'https://www.bougierealty.com/meetmike.html', 'image': 'https://www.bougierealty.com/assets/mike-1024.webp', 'sameAs': ['https://instagram.com/bougierealty']}</script>
+<style>
+.hero-title { font-size: 2.5em; font-weight: 700; margin-bottom: 0.3em; }
+.hero-subtitle { font-size: 1.5em; font-weight: 500; color: #444; margin-bottom: 1em; }
+</style>
+</head>
+<body>
+<header class="container">
+  <div class="nav">
+    <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo"/><span>Bougie Realty</span></a>
+    <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="profile-hero">
+  <div class="container grid">
+    <div class="lede">
+<div class="container section">
+  <nav class="breadcrumbs"><a href="/">Home</a> / Meet Mike</nav>
+  <h1 class="hero-title" class="title-emphasis" class="title-emphasis">Meet Mike</h1>
+  <p><strong>Your Trusted Real Estate Partner</strong></p>
+  <p>What sets Mike apart from other real estate agents is the rare combination of skills and experience he brings to the table. In addition to being a Realtor, Mike has over 10 years of experience as a real estate investor and property manager, which has given him a deep understanding of property valuation, market trends, and what it takes to maximize an investment. This hands-on knowledge allows him to offer insights that go beyond typical real estate advice.</p>
+  <p>Mike also has a proven track record in negotiation and deal-making, developed throughout his previous career leading IT organizations, strategy, and operations for both large corporations and small startups. This background has equipped him with the skills to handle complex transactions, advocate for clients’ best interests, and achieve results that truly work for them.</p>
+  <p>Whether you’re buying, selling, or investing, Mike’s personalized approach ensures a seamless and stress-free process from start to finish. When you work with Mike, you’re not just getting a realtor—you’re gaining a strategic partner who will go to bat for you every step of the way!</p>
+</div>
+    </div>
+    <div class="hero-photo">
+      <div class="card">
+        <picture>
+          <source type="image/webp" srcset="/assets/mike-480.webp 480w, /assets/mike-768.webp 768w, /assets/mike-1024.webp 1024w, /assets/mike-1536.webp 1536w" sizes="(max-width: 900px) 100vw, 42vw" />
+          <img src="/assets/mike-1024.webp" alt="Mike Bourgeois headshot, Bougie Realty" width="1024" height="1024" loading="eager" decoding="async" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div>
+            <h4>Bougie Realty</h4>
+            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="list">
+              <li><a href="/meetmike.html">Meet Mike</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li> </li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas served</h4>
+            <p>Massachusetts &amp; New Hampshire</p>
+          </div>
+        </div>
+        <div class="legal">
+          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+<script>
+(function(){
+  async function inject(selector, url){
+    try {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const res = await fetch(url, {cache:'no-store'});
+      if (!res.ok) return;
+      const html = await res.text();
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html.trim();
+      const repl = tmp.firstElementChild;
+      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
+        el.replaceWith(repl);
+      } else {
+        el.innerHTML = html;
+      }
+    } catch(e){ /* ignore */ }
+  }
+  inject('header', '/partials/header.html');
+  inject('footer', '/partials/footer.html');
+})();
+</script>
+
+</body></html>

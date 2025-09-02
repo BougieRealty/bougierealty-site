@@ -1,0 +1,146 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bougie Realty | MA & NH Real Estate</title>
+    <meta name="description" content="Every move matters. Buyers, sellers, and investors served in Massachusetts and New Hampshire." />
+    <link rel="canonical" href="https://www.bougierealty.com/" />
+    <meta property="og:title" content="Bougie Realty | MA & NH Real Estate" />
+    <meta property="og:description" content="Every move matters. Buyers, sellers, and investors served in Massachusetts and New Hampshire." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.bougierealty.com/" />
+    <meta property="og:image" content="https://www.bougierealty.com/assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bougierealty.com#website",
+      "url": "https://www.bougierealty.com/",
+      "name": "Bougie Realty",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.bougierealty.com#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.bougierealty.com#org",
+      "name": "Bougie Realty",
+      "url": "https://www.bougierealty.com/",
+      "logo": "https://www.bougierealty.com/assets/logo.png",
+      "sameAs": [
+        "https://instagram.com/bougierealty"
+      ]
+    }
+  ]
+}</script>
+    </head>
+    <body class="">
+
+    <header class="container">
+      <div class="nav">
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo" loading="eager" decoding="async"/><span>Bougie Realty</span></a>
+        <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+      </div>
+    </header>
+
+      <main>
+<section class="hero" style="position:relative; overflow:hidden;">
+  <div class="hero-overlay"></div>
+  <video id="hero-video" autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55);">
+    <source src="/assets/hero.mp4" type="video/mp4" />
+  </video>
+  <div class="container hero-copy" style="position:relative; z-index:1; padding:6rem 0 4rem;">
+    <div class="kicker eyebrow">Mike Bourgeois - REALTOR® MA &amp; NH</div>
+    <h1 >Every move matters.</h1>
+    <p >Whether you’re buying, selling, or investing, my job is to make the process clear, strategic, and successful. It all starts with a conversation!</p>
+    <div class="hero-cta">
+      <a class="button" href="/contact.html">Start the conversation</a>
+      <a class="button primary" href="/services.html">Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a class="ig-card" href="https://instagram.com/bougierealty" target="_blank" rel="noopener">
+      <div class="ig-thumb">
+        <img src="/assets/ig-thumb.jpg" alt="Bougie Realty Instagram preview" loading="lazy" />
+        <div class="ig-badge">
+          <img src="/assets/instagram.svg" alt="" aria-hidden="true" />
+          <span>@bougierealty</span>
+        </div>
+      </div>
+      <div class="ig-meta">
+        <h3>Follow on Instagram</h3>
+        <p>Market snapshots, listing moments, and behind-the-scenes execution.</p>
+        <span class="button">Open Instagram</span>
+      </div>
+    </a>
+  </div>
+</section>
+</main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-3">
+          <div>
+            <h4>Bougie Realty</h4>
+            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <ul class="list">
+              <li><a href="/meetmike.html">Meet Mike</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li> </li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas served</h4>
+            <p>Massachusetts &amp; New Hampshire</p>
+          </div>
+        </div>
+        <div class="legal">
+          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+
+    
+<script>
+(function(){
+  async function inject(selector, url){
+    try {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const res = await fetch(url, {cache:'no-store'});
+      if (!res.ok) return;
+      const html = await res.text();
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html.trim();
+      const repl = tmp.firstElementChild;
+      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
+        el.replaceWith(repl);
+      } else {
+        el.innerHTML = html;
+      }
+    } catch(e){ /* ignore */ }
+  }
+  inject('header', '/partials/header.html');
+  inject('footer', '/partials/footer.html');
+})();
+</script>
+
+</body>
+    </html>

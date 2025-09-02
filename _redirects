@@ -1,0 +1,3 @@
+/about.html   /meetmike.html   301
+/resources/*  /blog/:splat     301
+/resources    /blog            301
