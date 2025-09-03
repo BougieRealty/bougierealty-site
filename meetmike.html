@@ -14,10 +14,11 @@
 </style>
 </head>
 <body>
+<header id="site-header"></header>
 <header class="container">
   <div class="nav">
     <a class="brand" href="/"><img class="brand-logo" src="/assets/brand-mark.png" width="32" height="32" alt="Bougie Realty logo"/><span>Bougie Realty</span></a>
-    <nav> <a href="/meetmike" class="cta">Meet Mike</a> <a href="/services" class="cta">Services</a> <a href="/testimonials/" class="cta">Testimonials</a> <a href="/blog/" class="cta">Blog</a> <a href="/faq" class="cta">FAQ</a> <a href="/contact" class="cta">Get in touch</a></nav>
+    <nav><a href="/meetmike.html">Meet Mike</a><a href="/services.html">Services</a><a href="/blog/">Blog</a> <a href="/faq.html">FAQ</a><a class="cta" href="/contact.html">Get in touch</a></nav>
   </div>
 </header>
 
@@ -45,57 +46,8 @@
   </div>
 </section>
 </main>
-<footer class="footer">
-      <div class="container">
-        <div class="grid-3">
-          <div>
-            <h4>Bougie Realty</h4>
-            <p>Real estate, MA &amp; NH.<br/>Straight talk. Comp-backed pricing. Tight execution.</p>
-          </div>
-          <div>
-            <h4>Navigate</h4>
-            <ul class="list">
-              <li><a href="/meetmike.html">Meet Mike</a></li>
-              <li><a href="/services.html">Services</a></li>
-              <li><a href="/blog/">Blog</a></li>
-              <li> </li>
-              <li><a href="/faq.html">FAQ</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Areas served</h4>
-            <p>Massachusetts &amp; New Hampshire</p>
-          </div>
-        </div>
-        <div class="legal">
-          <small>© <span data-year></span> Bougie Realty. All rights reserved.</small>
-        </div>
-      </div>
-    </footer>
 
-<script>
-(function(){
-  async function inject(selector, url){
-    try {
-      const el = document.querySelector(selector);
-      if (!el) return;
-      const res = await fetch(url, {cache:'no-store'});
-      if (!res.ok) return;
-      const html = await res.text();
-      const tmp = document.createElement('div');
-      tmp.innerHTML = html.trim();
-      const repl = tmp.firstElementChild;
-      if (repl && el.tagName.toLowerCase() === repl.tagName.toLowerCase()){
-        el.replaceWith(repl);
-      } else {
-        el.innerHTML = html;
-      }
-    } catch(e){ /* ignore */ }
-  }
-  inject('header', '/partials/header.html');
-  inject('footer', '/partials/footer.html');
-})();
-</script>
+<footer id="site-footer"></footer>
 
+<script src="/assets/cms-render.js" defer></script>
 </body></html>

@@ -8,35 +8,97 @@ public_folder: "/assets/uploads"
 publish_mode: editorial_workflow
 
 collections:
-  - name: "partials"
-    label: "Partials (Nav & Footer)"
-    editor: { preview: false }
+  - name: "header"
+    label: "Header (Navigation)"
+    format: "json"
     files:
-      - label: "Header (Navigation)"
+      - label: "Header"
         name: "header"
-        file: "partials/header.html"
+        file: "content/header.json"
         fields:
-          - { label: "Header HTML", name: "body", widget: "text" }
+          - { label: "Brand Text", name: "brand", widget: "string", default: "Bougie Realty" }
+          - label: "Nav Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Open in new tab", name: "external", widget: "boolean", default: false }
+
+  - name: "footer"
+    label: "Footer"
+    format: "json"
+    files:
       - label: "Footer"
         name: "footer"
-        file: "partials/footer.html"
+        file: "content/footer.json"
         fields:
-          - { label: "Footer HTML", name: "body", widget: "text" }
+          - { label: "Copyright", name: "copyright", widget: "string", default: "© 2025 Bougie Realty" }
+          - { label: "Email", name: "email", widget: "string", default: "mike@bougierealty.com" }
+          - { label: "Phone", name: "phone", widget: "string", default: "(XXX) XXX-XXXX" }
+          - label: "Footer Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
 
-  - name: "pages"
-    label: "Pages (Direct Edit)"
-    editor: { preview: false }
+  - name: "home"
+    label: "Home (Hero)"
+    format: "json"
     files:
-      - label: "Home Page"
+      - label: "Home Hero"
         name: "home"
-        file: "index.html"
+        file: "content/home.json"
         fields:
-          - { label: "Page HTML", name: "body", widget: "text" }
-      - label: "Services Page"
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - label: "Primary CTA"
+            name: "primaryCta"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+          - label: "Secondary CTA"
+            name: "secondaryCta"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+
+  - name: "services"
+    label: "Services (Tiles)"
+    format: "json"
+    files:
+      - label: "Services"
         name: "services"
-        file: "services.html"
+        file: "content/services.json"
         fields:
-          - { label: "Page HTML", name: "body", widget: "text" }
+          - label: "Tiles"
+            name: "tiles"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Link", name: "href", widget: "string" }
+              - { label: "Image URL (optional)", name: "img", widget: "string", required: false }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    format: "json"
+    files:
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Entries"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Headshot URL (optional)", name: "photo", widget: "string", required: false }
+              - { label: "Link (optional)", name: "link", widget: "string", required: false }
 
   - name: "blog"
     label: "Blog"
@@ -47,5 +109,5 @@ collections:
     editor: { preview: false }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body (HTML/Markdown)", name: "body", widget: "markdown" }
+      - { label: "Body (Markdown)", name: "body", widget: "markdown" }
     format: "frontmatter"

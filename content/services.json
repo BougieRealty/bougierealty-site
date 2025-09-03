@@ -1,0 +1,19 @@
+{
+  "tiles": [
+    {
+      "title": "Sellers",
+      "desc": "Maximize your sale with pricing, prep, and negotiation that works.",
+      "href": "/sellers/"
+    },
+    {
+      "title": "Buyers",
+      "desc": "Win the right home with smart search, bidding, and due diligence.",
+      "href": "/buyers/"
+    },
+    {
+      "title": "Investors",
+      "desc": "Target cap rates, cash flow, and neighborhoods that pencil.",
+      "href": "/investors/"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "headline": "Your trusted realtor in [Your City]",
+  "subheadline": "Buying, selling, or investing \u2014 I\u2019ll steer you away from the costly mistakes and toward the smart move.",
+  "primaryCta": {
+    "label": "Start the conversation",
+    "href": "/contact"
+  },
+  "secondaryCta": {
+    "label": "Services",
+    "href": "/services.html"
+  }
+}

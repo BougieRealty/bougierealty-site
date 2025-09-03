@@ -1,0 +1,30 @@
+{
+  "brand": "Bougie Realty",
+  "links": [
+    {
+      "label": "Meet Mike",
+      "href": "/meetmike",
+      "external": false
+    },
+    {
+      "label": "Services",
+      "href": "/services.html",
+      "external": false
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/",
+      "external": false
+    },
+    {
+      "label": "Testimonials",
+      "href": "/testimonials/",
+      "external": false
+    },
+    {
+      "label": "Get in touch",
+      "href": "/contact",
+      "external": false
+    }
+  ]
+}

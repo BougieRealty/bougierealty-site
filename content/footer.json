@@ -1,0 +1,27 @@
+{
+  "copyright": "\u00a9 2025 Bougie Realty",
+  "email": "mike@bougierealty.com",
+  "phone": "(XXX) XXX-XXXX",
+  "links": [
+    {
+      "label": "Meet Mike",
+      "href": "/meetmike"
+    },
+    {
+      "label": "Services",
+      "href": "/services.html"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "Testimonials",
+      "href": "/testimonials/"
+    },
+    {
+      "label": "Get in touch",
+      "href": "/contact"
+    }
+  ]
+}
