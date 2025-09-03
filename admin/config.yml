@@ -10,13 +10,18 @@ publish_mode: editorial_workflow
 collections:
   - name: "partials"
     label: "Partials (Nav & Footer)"
-    label_singular: "Partial"
-    folder: "partials"
-    extension: "html"
-    create: true
     editor: { preview: false }
-    fields:
-      - { label: "File body (HTML)", name: "body", widget: "code", hint: "This edits the entire file." }
+    files:
+      - label: "Header (Navigation)"
+        name: "header"
+        file: "partials/header.html"
+        fields:
+          - { label: "Header HTML", name: "body", widget: "code", hint: "Edits entire file." }
+      - label: "Footer"
+        name: "footer"
+        file: "partials/footer.html"
+        fields:
+          - { label: "Footer HTML", name: "body", widget: "code", hint: "Edits entire file." }
 
   - name: "pages"
     label: "Pages (Direct Edit)"
