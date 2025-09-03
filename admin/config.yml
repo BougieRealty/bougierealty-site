@@ -8,98 +8,55 @@ public_folder: "/assets/uploads"
 publish_mode: editorial_workflow
 
 collections:
-  - name: "header"
-    label: "Header (Navigation)"
-    format: "json"
-    files:
-      - label: "Header"
-        name: "header"
-        file: "content/header.json"
-        fields:
-          - { label: "Brand Text", name: "brand", widget: "string", default: "Bougie Realty" }
-          - label: "Nav Links"
-            name: "links"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "href", widget: "string" }
-              - { label: "Open in new tab", name: "external", widget: "boolean", default: false }
 
-  - name: "footer"
-    label: "Footer"
-    format: "json"
+  # ------- Global partials (edit site-wide HTML) -------
+  - name: "partials"
+    label: "Partials (Nav & Footer)"
+    editor: { preview: false }
     files:
+      - label: "Header (Navigation)"
+        name: "header"
+        file: "partials/header.html"
+        fields:
+          - { label: "Header HTML", name: "body", widget: "text", hint: "Edits the entire file." }
       - label: "Footer"
         name: "footer"
-        file: "content/footer.json"
+        file: "partials/footer.html"
         fields:
-          - { label: "Copyright", name: "copyright", widget: "string", default: "© 2025 Bougie Realty" }
-          - { label: "Email", name: "email", widget: "string", default: "mike@bougierealty.com" }
-          - { label: "Phone", name: "phone", widget: "string", default: "(XXX) XXX-XXXX" }
-          - label: "Footer Links"
-            name: "links"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "href", widget: "string" }
+          - { label: "Footer HTML", name: "body", widget: "text", hint: "Edits the entire file." }
 
-  - name: "home"
-    label: "Home (Hero)"
-    format: "json"
+  # ------- Raw HTML pages (edit full page source) -------
+  - name: "pages_raw"
+    label: "Pages (Raw HTML)"
+    editor: { preview: false }
     files:
-      - label: "Home Hero"
-        name: "home"
-        file: "content/home.json"
+      - label: "Home Page (Raw)"
+        name: "home_raw"
+        file: "index.html"
         fields:
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Subheadline", name: "subheadline", widget: "text" }
-          - label: "Primary CTA"
-            name: "primaryCta"
-            widget: "object"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "href", widget: "string" }
-          - label: "Secondary CTA"
-            name: "secondaryCta"
-            widget: "object"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "href", widget: "string" }
-
-  - name: "services"
-    label: "Services (Tiles)"
-    format: "json"
-    files:
-      - label: "Services"
-        name: "services"
-        file: "content/services.json"
+          - { label: "HTML", name: "body", widget: "text" }
+      - label: "Services Page (Raw)"
+        name: "services_raw"
+        file: "services.html"
         fields:
-          - label: "Tiles"
-            name: "tiles"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Link", name: "href", widget: "string" }
-              - { label: "Image URL (optional)", name: "img", widget: "string", required: false }
-
-  - name: "testimonials"
-    label: "Testimonials"
-    format: "json"
-    files:
-      - label: "Testimonials"
-        name: "testimonials"
-        file: "content/testimonials.json"
+          - { label: "HTML", name: "body", widget: "text" }
+      - label: "Meet Mike (Raw)"
+        name: "meetmike_raw"
+        file: "meetmike/index.html"
         fields:
-          - label: "Entries"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Client Name", name: "name", widget: "string" }
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Headshot URL (optional)", name: "photo", widget: "string", required: false }
-              - { label: "Link (optional)", name: "link", widget: "string", required: false }
+          - { label: "HTML", name: "body", widget: "text" }
+      - label: "Testimonials (Raw)"
+        name: "testimonials_raw"
+        file: "testimonials/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+      - label: "Contact (Raw)"
+        name: "contact_raw"
+        file: "contact/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
 
+  # ------- Blog stays structured (markdown) -------
   - name: "blog"
     label: "Blog"
     folder: "blog"
