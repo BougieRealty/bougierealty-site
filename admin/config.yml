@@ -11,23 +11,21 @@ collections:
   - name: "partials"
     label: "Partials (Nav & Footer)"
     editor: { preview: false }
-    format: "raw"
     files:
       - label: "Header (Navigation)"
         name: "header"
         file: "partials/header.html"
         fields:
-          - { label: "Header HTML", name: "body", widget: "text", hint: "This edits the entire file." }
+          - { label: "Header HTML", name: "body", widget: "text" }
       - label: "Footer"
         name: "footer"
         file: "partials/footer.html"
         fields:
-          - { label: "Footer HTML", name: "body", widget: "text", hint: "This edits the entire file." }
+          - { label: "Footer HTML", name: "body", widget: "text" }
 
   - name: "pages"
     label: "Pages (Direct Edit)"
     editor: { preview: false }
-    format: "raw"
     files:
       - label: "Home Page"
         name: "home"
