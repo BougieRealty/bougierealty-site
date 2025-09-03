@@ -6,7 +6,20 @@
     <title>Bougie Realty Admin</title>
   </head>
   <body>
-    <!-- Decap CMS -->
+    <!-- Netlify Identity widget is REQUIRED for invite-token acceptance and email/password auth -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Decap (Netlify) CMS app -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user){
+          if (!user) {
+            window.netlifyIdentity.on('login', function(){ document.location.reload(); });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

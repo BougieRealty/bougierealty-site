@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -16,36 +15,20 @@ collections:
         name: "header"
         file: "partials/header.html"
         fields:
-          - { label: "Header HTML", name: "body", widget: "code", default: "", hint: "Edit navigation links and header markup." }
+          - { label: "Header HTML", name: "body", widget: "code" }
       - label: "Footer"
         name: "footer"
         file: "partials/footer.html"
         fields:
-          - { label: "Footer HTML", name: "body", widget: "code", default: "", hint: "Edit footer content and links." }
+          - { label: "Footer HTML", name: "body", widget: "code" }
 
   - name: "pages"
     label: "Pages (Direct Edit)"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Page HTML", name: "body", widget: "code", default: "", hint: "Advanced: edit carefully." }
-      - label: "Services Page"
-        name: "services"
-        file: "services.html"
-        fields:
-          - { label: "Page HTML", name: "body", widget: "code", default: "", hint: "Advanced: edit carefully." }
-      - label: "Sellers Page"
-        name: "sellers"
-        file: "sellers/index.html"
-        fields:
-          - { label: "Page HTML", name: "body", widget: "code", default: "", hint: "Edit the Sellers address form section copy." }
-      - label: "Testimonials Page"
-        name: "testimonials"
-        file: "testimonials/index.html"
-        fields:
-          - { label: "Page HTML", name: "body", widget: "code", default: "", hint: "Add or edit testimonials content." }
+      - { label: "Home", name: "home", file: "index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
+      - { label: "Services", name: "services", file: "services.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
+      - { label: "Sellers", name: "sellers", file: "sellers/index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
+      - { label: "Testimonials", name: "testimonials", file: "testimonials/index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
 
   - name: "blog"
     label: "Blog"
@@ -53,9 +36,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "html"
-    editor:
-      preview: false
+    editor: { preview: false }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body (HTML)", name: "body", widget: "markdown", hint: "Use the toolbar; HTML allowed." }
+      - { label: "Body (HTML/Markdown)", name: "body", widget: "markdown" }
     format: "frontmatter"
