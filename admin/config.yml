@@ -10,25 +10,29 @@ publish_mode: editorial_workflow
 collections:
   - name: "partials"
     label: "Partials (Nav & Footer)"
-    files:
-      - label: "Header (Navigation)"
-        name: "header"
-        file: "partials/header.html"
-        fields:
-          - { label: "Header HTML", name: "body", widget: "code" }
-      - label: "Footer"
-        name: "footer"
-        file: "partials/footer.html"
-        fields:
-          - { label: "Footer HTML", name: "body", widget: "code" }
+    label_singular: "Partial"
+    folder: "partials"
+    extension: "html"
+    create: true
+    editor: { preview: false }
+    fields:
+      - { label: "File body (HTML)", name: "body", widget: "code", hint: "This edits the entire file." }
 
   - name: "pages"
     label: "Pages (Direct Edit)"
+    editor: { preview: false }
+    format: "raw"
     files:
-      - { label: "Home", name: "home", file: "index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
-      - { label: "Services", name: "services", file: "services.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
-      - { label: "Sellers", name: "sellers", file: "sellers/index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
-      - { label: "Testimonials", name: "testimonials", file: "testimonials/index.html", fields: [{label: "HTML", name: "body", widget: "code"}] }
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Page HTML", name: "body", widget: "code" }
+      - label: "Services Page"
+        name: "services"
+        file: "services.html"
+        fields:
+          - { label: "Page HTML", name: "body", widget: "code" }
 
   - name: "blog"
     label: "Blog"
